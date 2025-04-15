@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Source+Code+Pro:wght@300;400;500;700&display=swap');
+
+:root {
+  --font-main: 'Source Code Pro', monospace;
+  --title-font: 'Lora', serif;
+  --font-color: #0a0a0a;
+  --bg-color: #f4f1e0;
+  --gray-light: #ccc;
+  --text-muted: #333333;
+  --max-width: 1060px; /* was 960px, now about 10% wider */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-main);
+  background: var(--bg-color);
+  color: var(--font-color);
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.page-wrapper {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+/* Header still needs full width border */
+header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--gray-light);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: var(--title-font);
+  text-transform: none; /* Prevent text from being forced to lowercase */
+  font-style: italic; /* Italicize the title */
+  letter-spacing: 0.2px;
+  line-height: 1;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  font-size: 15px;
+  text-transform: lowercase;
+  margin-top: 0.3rem;
+}
+
+nav a {
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+nav a.active {
+  background-color: #e2e2e2;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 2rem 2rem;
+}
+
+section {
+  margin-bottom: 1.8rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 580px;
+}
+
+.info-cluster h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+.info-cluster p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card {
+  background: rgb(245, 242, 235);
+  border: 1px solid var(--gray-light);
+  border-radius: 0px;
+  padding: 1rem 1.3rem;
+  margin-bottom: 1rem;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.timeline .card {
+  padding: 0.9rem 1.1rem;
+}
+
+.timeline .card p {
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+/* Footer full width divider and aligned text */
+footer {
+  border-top: 1px solid var(--gray-light);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 1rem 2rem;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer a {
+  color: var(--font-color);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
+
+/* Marker to the left of each timeline item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
+}
+
+/* Optional: lighter background inside each card to match type */
+.timeline-item.job .card {
+  border-left: 8px solid #F18F01;
+}
+
+.timeline-item.education .card {
+  border-left: 8px solid #4062BB;
+}
+
+.timeline-item.event .card {
+  border-left: 8px solid #21A179;
+}
+
+.timeline-item.project .card {
+  border-left: 8px solid #DB3A34;
+}
+
+/* Timeline legend styling */
+.timeline-legend {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.timeline-legend span {
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background-color: #ddd; /* fallback color */
+  color: #000;
+}
+
+/* Match timeline card border colors */
+.timeline-legend .job {
+  background-color: #F18F01;
+}
+
+.timeline-legend .education {
+  background-color: #4062BB;
+  color: white;
+}
+
+.timeline-legend .event {
+  background-color: #21A179;
+  color: white;
+}
+
+.timeline-legend .project {
+  background-color: #DB3A34;
+  color: white;
+}
+
+/* FAQ section styling */
+.faq-item {
+  margin-bottom: 1.25rem;
+}
+
+.faq-question {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.faq-answer {
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.project-item img {
+  width: 100%;
+  max-width: 280px; /* ✅ This is the fix */
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.project-info p {
+  margin-top: 0.4rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Experience cards with image on left */
+.experience-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  border-left: 8px solid var(--gray-light);
+  margin-bottom: 1.5rem;
+}
+
+.experience-card img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.experience-info {
+  flex: 1;
+}
+
+.experience-info h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.experience-info h3 a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.experience-info h3 a:hover {
+  opacity: 0.7;
+}
+
+.experience-info ul {
+  margin-top: 0.4rem;
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+.experience-info li {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}

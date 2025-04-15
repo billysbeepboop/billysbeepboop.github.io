@@ -1,16 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css" />
-</head>
-      
-<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Site</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Source+Code+Pro:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <h1>Welcome to Plummer's Atelier!</h1>
-  <p>You have landed on my personal website, obviously a work in progress right now!.</p>
+<div class="page-wrapper">
+    <header>
+        <div class="header-inner">
+        <div class="site-title">Plummer's Atelier</div>
+        <nav>
+            <ul>
+            <li><a href="index.html" class="active">home</a></li>
+            <li><a href="about_me.html">about</a></li>
+            <li><a href="cool_stuff.html">cool stuff</a></li>
+            <li><a href="experience.html">experience</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+      
+
+
+  <main class="container">
+    <section class="hero">
+      <h1>Building with purpose.</h1>
+      <p>I'm Billy — engineer, tinkerer, and design obsessive. This is where I showcase projects, experiments, and career experience.</p>
+    </section>
+
+    <section class="info-cluster">
+      <h2>Recent Highlights</h2>
+      <p>Here are some of the things I’ve been building, thinking, or doing lately.</p>
+    </section>
+
+    <div class="timeline-legend">
+        <span class="job">job</span>
+        <span class="education">education</span>
+        <span class="event">event</span>
+        <span class="project">project</span>
+    </div>
+      
+    <section class="timeline">
+        <div class="timeline-item job">
+          <div class="card">
+            <p><strong>🧠 2025 – Present</strong><br>Leading automation systems development at NextMotion Inc.</p>
+          </div>
+        </div>
+      
+        <div class="timeline-item education">
+          <div class="card">
+            <p><strong>🎓 2023 – 2025</strong><br>Graduate researcher in robotics and embedded control.</p>
+          </div>
+        </div>
+      
+        <div class="timeline-item project">
+          <div class="card">
+            <p><strong>🛠️ 2022</strong><br>Developed open-source tools for real-time motor control with ESP32 + Raspberry Pi.</p>
+          </div>
+        </div>
+      
+        <div class="timeline-item event">
+          <div class="card">
+            <p><strong>🎤 2021</strong><br>Spoke at MakerCon SF about creative prototyping and physical intelligence.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+  </main>
+</div> <!-- end .page-wrapper -->
+
+  <footer>
+    <p>
+        Designed & coded by Billy Plummer — 2025 • 
+        <a href="https://github.com/yourusername/your-repo" target="_blank">View source on GitHub</a>
+    </p>
+  </footer>
 </body>
 </html>
