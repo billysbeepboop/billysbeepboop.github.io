@@ -115,7 +115,7 @@ section {
 .hero p {
   font-size: 1rem;
   color: var(--text-muted);
-  max-width: 580px;
+  max-width: 1120px;
 }
 
 .info-cluster h2 {
